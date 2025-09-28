@@ -20,24 +20,43 @@
    * colors
    */
 
-  --st-patricks-blue: hsl(236, 57%, 28%);
+  /* Primary Dark Text/Title Color (was st-patricks-blue) */
+  --st-patricks-blue: hsl(350, 40%, 15%); /* Very Deep Maroon/Burgundy */
+  /* New Accent (was amaranth-purple) - kept for consistency */
   --amaranth-purple: hsl(335, 88%, 38%);
-  --royal-blue-dark: hsl(231, 68%, 21%);
-  --chrome-yellow: hsl(39, 100%, 52%);
+  /* Darker end of Primary Gradient (was royal-blue-dark) */
+  --royal-blue-dark: hsl(0, 70%, 25%); /* Deep Blood Red/Maroon */
+  /* Accent/Highlight Gold/Yellow (was chrome-yellow) */
+  --chrome-yellow: hsl(40, 100%, 50%); /* Rich Gold */
   --space-cadet-1: hsl(230, 41%, 25%);
   --space-cadet-2: hsl(230, 59%, 16%);
-  --winter-sky_50: hsla(335, 87%, 53%, 0.5);
-  --purple-navy: hsl(236, 26%, 43%);
-  --ksu-purple: hsl(275, 54%, 33%);
-  --winter-sky: hsl(335, 87%, 53%);
-  --razzmatazz: hsl(335, 87%, 51%);
+  /* Light Accent 50% opacity (based on new winter-sky) */
+  --winter-sky_50: hsla(40, 100%, 50%, 0.5);
+  /* Body Text Color (was purple-navy) */
+  --purple-navy: hsl(350, 15%, 40%); /* Darker Muted Red/Maroon for body text */
+  /* Lighter end of Primary Gradient (was ksu-purple) */
+  --ksu-purple: hsl(350, 70%, 40%); /* Richer Maroon */
+  /* Main Accent Color for icons & hover (was winter-sky) */
+  --winter-sky: hsl(40, 100%, 50%); /* Rich Gold */
+  /* Gradient 2 Start (was razzmatazz) */
+  --razzmatazz: hsl(30, 100%, 60%); /* Bright Orange-Gold */
   --platinum: hsl(0, 0%, 90%);
   --black_70: hsla(0, 0%, 0%, 0.7);
-  --rajah: hsl(29, 99%, 67%);
+  /* Gradient 2 End (was rajah) */
+  --rajah: hsl(40, 100%, 50%); /* Rich Gold */
   --white: hsl(0, 0%, 100%);
 
+  /* Primary Gradient: Deep Blood Red (royal-blue-dark) -> Richer Maroon (ksu-purple) -> Deep Blood Red (Used for Hero BG, Feature Icons) */
   --gradient-1: linear-gradient(90deg,var(--royal-blue-dark) 0,var(--ksu-purple) 51%,var(--royal-blue-dark));
+  /* Accent Gradient: Bright Orange-Gold (razzmatazz) -> Rich Gold (rajah) (Used for Buttons, Underline) */
   --gradient-2: linear-gradient(90deg,var(--razzmatazz) ,var(--rajah));
+  /* NEW GRADIENT for animated background: Maroon -> Gold -> Deep Red */
+  --gradient-3: linear-gradient(135deg, 
+      hsl(350, 70%, 40%) 0%,   /* Richer Maroon */
+      hsl(40, 100%, 50%) 50%,  /* Rich Gold */
+      hsl(0, 70%, 25%) 100%   /* Deep Blood Red/Maroon */
+  );
+
 
   /**
    * typography
@@ -140,9 +159,15 @@ html {
 }
 
 body {
-  background-color: var(--white);
+  /* Use the new gradient as the background */
+  background-image: var(--gradient-3); 
+  /* Make the gradient large so the animation is subtle */
+  background-size: 400% 400%; 
+  background-color: var(--white); /* Fallback */
   color: var(--purple-navy);
   font-size: 1.6rem;
+  /* Apply the animation */
+  animation: gradientAnimation 20s ease infinite; 
 }
 
 ::-webkit-scrollbar { width: 10px; }
@@ -188,7 +213,30 @@ body {
   100% { transform: translate(2px, 2px) rotate(1deg); }
 }
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .section { padding-block: var(--section-padding); }
+
+/* Ensure the main container holding all sections has a white background too */
+main {
+  background-color: var(--white);
+}
+
+main article .section {
+  background-color: var(--white);
+  /* Optional: Add a subtle shadow for a floating effect over the animated background */
+  box-shadow: 0 0 25px hsla(0, 0%, 0%, 0.05); 
+}
 
 .section-title {
   color: var(--st-patricks-blue);
@@ -358,6 +406,11 @@ body {
 }
 
 .hero-content { margin-block-end: 50px; }
+
+/* Style for the button wrapper: stacks buttons by default (display: block) */
+.hero-btns .btn:not(:last-child) {
+  margin-block-end: 15px; /* Space between stacked buttons on mobile */
+}
 
 .hero-subtitle {
   color: var(--chrome-yellow);
@@ -759,6 +812,28 @@ body {
     margin-inline-start: auto;
   }
 
+
+
+  /**
+   * HERO
+   */
+  
+  /* Use flex for the button wrapper on larger screens to place them side-by-side */
+  .hero-btns {
+    display: flex;
+    gap: 15px; /* Space between the side-by-side buttons */
+    flex-wrap: wrap; /* Allows buttons to wrap if screen is very narrow */
+  }
+  
+  /* Remove the vertical margin for the buttons when they are side-by-side */
+  .hero-btns .btn:not(:last-child) {
+    margin-block-end: 0;
+  }
+  
+  /* Ensure the buttons don't stretch to 100% of the flex container's width */
+  .hero-btns .btn {
+    width: auto;
+  }
 
 
   /**
