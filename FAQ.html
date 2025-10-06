@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartSite Labs - Frequently Asked Questions</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Source+Sans+Pro:wght@600;700&display=swap"
+    rel="stylesheet">
+    <style>
+        /* Specific styles for FAQ page (simple accordion effect) */
+        .accordion-item {
+            border: 1px solid var(--platinum);
+            border-radius: var(--radius-12);
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .accordion-button {
+            width: 100%;
+            background-color: var(--white);
+            color: var(--st-patricks-blue);
+            padding: 20px;
+            text-align: left;
+            font-size: var(--fs-7);
+            font-weight: var(--fw-600);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-button ion-icon {
+            font-size: 20px;
+            color: var(--winter-sky);
+            transition: transform 0.3s ease;
+            --ionicon-stroke-width: 50px;
+        }
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            background-color: hsl(0, 0%, 98%);
+        }
+        .accordion-content p {
+            padding-bottom: 20px;
+            padding-top: 10px;
+            font-size: var(--fs-8);
+            line-height: 1.6;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px; /* Large enough to hold content */
+            padding-bottom: 20px;
+        }
+        .accordion-item.active .accordion-button ion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body id="top" class="sub-page">
+
+  <!-- 
+    - #HEADER - The header on sub-pages is typically static/active
+  -->
+
+  <header class="header active" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="index.html">
+        <h1 class="logo">SmartSite Labs</h1>
+      </a>
+
+      <nav class="navbar header-nav" data-navbar>
+
+        <div class="navbar-top">
+          <a href="index.html" class="logo">SmartSite Labs</a>
+
+          <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html#home" class="navbar-link" data-navbar-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#about" class="navbar-link" data-navbar-link>About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#services" class="navbar-link" data-navbar-link>Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#features" class="navbar-link" data-navbar-link>Features</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html#blog" class="navbar-link" data-navbar-link>Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-navbar-link>Contact Us</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="#" class="btn header-btn">
+        <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+        <span>Book a free consultation</span>
+      </a>
+
+      <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- Page Title Header -->
+      <section class="section inner-page-hero" style="background-color: var(--royal-blue-dark); padding-top: 150px; padding-bottom: 80px;">
+        <div class="container">
+          <h2 class="h2 hero-title" style="color: var(--white); text-align: center;">Frequently Asked Questions</h2>
+          <p class="hero-text" style="color: var(--platinum); text-align: center;">Find quick answers about our AI-driven process, pricing, and project timelines.</p>
+        </div>
+      </section>
+
+      <!-- Page Content: FAQ Accordion -->
+      <section class="section page-content">
+        <div class="container">
+          
+          <div class="accordion-list">
+
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item">
+              <button class="accordion-button" aria-expanded="false">
+                What does 'AI-Powered Web Development' mean for my project?
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  It means we leverage advanced AI tools for initial strategy, market analysis, conversion rate optimization (CRO) suggestions, and code quality checks. This reduces development time, eliminates human errors, and results in a website optimized from day one for performance and user engagement.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item">
+              <button class="accordion-button" aria-expanded="false">
+                What is your typical project timeline?
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Timelines vary based on complexity (e.g., simple marketing site vs. custom SaaS platform). Generally, smaller projects take 4-6 weeks, while large, custom solutions require 12-20 weeks. We provide a detailed project plan with milestones during the initial consultation.
+                </p>
+              </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item">
+              <button class="accordion-button" aria-expanded="false">
+                Do you offer ongoing maintenance and support?
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Yes, we offer flexible post-launch support and maintenance plans, including security updates, performance monitoring, feature development, and content management. We ensure your site remains fast, secure, and compliant long after launch.
+                </p>
+              </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item">
+              <button class="accordion-button" aria-expanded="false">
+                What technologies do you specialize in?
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Our primary stack includes modern frameworks like React, Angular, and Vue for the front-end, and Node.js/Python for the back-end. We focus on Headless CMS architectures, serverless deployment, and robust cloud services for scalability.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER (using content from index.html)
+  -->
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">SmartSite Labs</a>
+          <p class="text">
+            Maecenas pellentesque placerat quam, in finibus nisl tincidunt sed. Aliquam magna augue, malesuada ut
+            feugiat eget, cursus eget felis.
+          </p>
+          <ul class="social-list">
+            <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          </ul>
+        </div>
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Our links</p></li>
+          <li><a href="index.html#home" class="footer-link">Home</a></li>
+          <li><a href="index.html#about" class="footer-link">About Us</a></li>
+          <li><a href="index.html#services" class="footer-link">Services</a></li>
+          <li><a href="#" class="footer-link">Team</a></li>
+          <li><a href="index.html#blog" class="footer-link">Blog</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Our Services</p></li>
+          <li><a href="#" class="footer-link">Strategy & Research</a></li>
+          <li><a href="#" class="footer-link">Web Development</a></li>
+          <li><a href="#" class="footer-link">Web Solution</a></li>
+          <li><a href="#" class="footer-link">Digital Marketing</a></li>
+          <li><a href="#" class="footer-link">App Design</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Other links</p></li>
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
+          <li><a href="terms.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="support.html" class="footer-link">Support</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li><p class="footer-list-title">Contact Us</p></li>
+          <li class="footer-item"><div class="footer-item-icon"><ion-icon name="call"></ion-icon></div><div><a href="tel:+2484214313" class="footer-item-link">+248-421-4313</a><a href="tel:+2486871365" class="footer-item-link">+248-687-1365</a></div></li>
+          <li class="footer-item"><div class="footer-item-icon"><ion-icon name="mail"></ion-icon></div><div><a href="mailto:info@desinic.com" class="footer-item-link">info@desinic.com</a><a href="mailto:help@desinic.com" class="footer-item-link">help@desinic.com</a></div></li>
+          <li class="footer-item"><div class="footer-item-icon"><ion-icon name="location"></ion-icon></div><address class="footer-item-link">Pontiac, Michigan, United States of America</address></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Right Reserved</p>
+    </div>
+  </footer>
+
+  <a href="#top" class="go-top  active" aria-label="Go To Top" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  <script>
+    // FAQ Accordion Logic
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+      item.querySelector('.accordion-button').addEventListener('click', function() {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other active items
+        accordionItems.forEach(i => i.classList.remove('active'));
+
+        // Toggle the current item
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
