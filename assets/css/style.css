@@ -227,6 +227,7 @@ body {
 
 .section { padding-block: var(--section-padding); }
 
+
 /* Ensure the main container holding all sections has a white background too */
 main {
   background-color: var(--white);
@@ -534,7 +535,6 @@ main article .section {
   color: var(--winter-sky);
   transition: var(--transition-1);
 }
-
 .service-card .card-btn:is(:hover, :focus) {
   color: var(--white);
   background-color: var(--winter-sky);
