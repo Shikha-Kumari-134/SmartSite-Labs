@@ -699,7 +699,7 @@ main article .section {
 }
 
 .footer-top .social-link:is(:hover, :focus) {
-  background-image: var(--gradient-2);
+  background-image: var(--gradient-3);
   color: var(--white);
 }
 
