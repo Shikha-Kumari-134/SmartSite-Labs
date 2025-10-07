@@ -311,14 +311,14 @@ main article .section {
 
 /* Logo image styling */
 .logo-img {
-  width: 90px;   /* increase/decrease as needed */
+  width: 50px;   /* increase/decrease as needed */
   height: auto;
 }
 
 /* Logo text styling */
 .logo-text {
   color: #2b2929;          /* white text */
-  font-size: 8rem;    /* increase this for larger text */
+  font-size: 4rem;    /* increase this for larger text */
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
 }
@@ -333,7 +333,7 @@ main article .section {
   top: 0;
   left: 0;
   width: 100%;
-  padding-block: 14px;
+  padding-block: 6px;
   z-index: 4;
   transition: var(--transition-1);
 }
