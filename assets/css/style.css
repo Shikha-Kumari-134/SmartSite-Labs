@@ -582,6 +582,24 @@ main article .section {
 }
 
 
+.card-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--selective-yellow);
+  border-radius: 50%;
+  color: var(--selective-yellow);
+  background: transparent;
+  transition: 0.3s ease;
+  margin : 0 auto;
+}
+
+.card-btn:hover {
+  background: var(--selective-yellow);
+  color: #fff;
+}
 
 
 

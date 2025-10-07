@@ -1,267 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Website Service - SmartSite Labs</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Inline styling specific for service details page */
-    .service-details {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+  <title>SmartSite Labs - Business Website</title>
 
-    .service-details h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-    .service-details h2 {
-      font-size: 2rem;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .service-details p, .service-details ul {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    .service-details ul li {
-      margin-bottom: 10px;
-    }
-
-    .service-details .btn {
-      display: inline-block;
-      background-color: #b30000;
-      color: #fff;
-      padding: 12px 25px;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 20px;
-      transition: background 0.3s;
-    }
-
-    .service-details .btn:hover {
-      background-color: #800000;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Source+Sans+Pro:wght@600;700&display=swap"
+    rel="stylesheet">
 </head>
-<body>
-  <!-- Header -->
-  <header class="header">
+
+<body id="top" class="sub-page">
+
+  <!-- ===== HEADER ===== -->
+  <header class="header active" data-header>
     <div class="container">
-      <a href="index.html" class="brand-logo">
-        <img src="logo.png" alt="Logo" class="logo-img">
-        <span class="logo-text">SmartSite Labs</span>
+      <div class="overlay" data-overlay></div>
+      <a href="index.html">
+        <h1 class="logo">SmartSite Labs</h1>
       </a>
+
+      <nav class="navbar header-nav" data-navbar>
+        <div class="navbar-top">
+          <a href="index.html" class="logo">SmartSite Labs</a>
+          <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html#home" class="navbar-link" data-navbar-link>Home</a></li>
+          <li class="navbar-item"><a href="index.html#about" class="navbar-link" data-navbar-link>About</a></li>
+          <li class="navbar-item"><a href="index.html#services" class="navbar-link" data-navbar-link>Services</a></li>
+          <li class="navbar-item"><a href="index.html#features" class="navbar-link" data-navbar-link>Features</a></li>
+          <li class="navbar-item"><a href="index.html#blog" class="navbar-link" data-navbar-link>Blog</a></li>
+          <li class="navbar-item"><a href="#" class="navbar-link" data-navbar-link>Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
     </div>
   </header>
 
-  <!-- Service Details Section -->
-  <section class="service-details">
-    <h1>Business Website Development</h1>
-    <p>We create professional, responsive, and user-friendly business websites that help your brand establish a strong online presence. Our websites are tailored to your business goals, ensuring a seamless experience for your visitors and driving engagement.</p>
+  <!-- ===== PAGE CONTENT ===== -->
+  <main>
+    <article>
 
-    <h2>Our Approach</h2>
-    <p>
-      1. <strong>Requirement Analysis:</strong> Understand your business, target audience, and goals.<br>
-      2. <strong>Design & Wireframes:</strong> Create visually appealing and intuitive designs.<br>
-      3. <strong>Development:</strong> Build a responsive, fast, and secure website.<br>
-      4. <strong>Testing & Launch:</strong> Ensure the website works perfectly across devices.<br>
-      5. <strong>Post-Launch Support:</strong> Provide ongoing maintenance and updates.
-    </p>
+      <!-- Hero Section -->
+      <section class="section inner-page-hero" style="background-color: var(--royal-blue-dark); padding-top: 150px; padding-bottom: 80px;">
+        <div class="container">
+          <h2 class="h2 hero-title" style="color: var(--white); text-align: center;">Business Website Development</h2>
+          <p class="hero-text" style="color: var(--platinum); text-align: center;">Build a professional, responsive, and growth-focused business website with SmartSite Labs.</p>
+        </div>
+      </section>
 
-    <h2>Timeline</h2>
-    <p>Typically, a business website project takes <strong>3–5 weeks</strong> depending on complexity and features required.</p>
+      <!-- Service Details -->
+      <section class="section page-content">
+        <div class="container">
 
-    <h2>Requirements</h2>
-    <ul>
-      <li>Business details and goals</li>
-      <li>Branding assets (logo, colors, fonts)</li>
-      <li>Content and images for the website</li>
-      <li>Domain & hosting access (if available)</li>
-    </ul>
+          <div class="service-details">
+            
+            <h3 class="h3 section-title">Description</h3>
+            <p class="text">
+              We create professional, responsive, and user-friendly business websites that help your brand establish a strong online presence. Our websites are tailored to your business goals, ensuring a seamless experience for your visitors and driving engagement.
+            </p>
 
-    <a href="#" class="btn">Book This Service</a>
-  </section>
+            <h3 class="h3 section-title">Our Approach</h3>
+            <ul class="text" style="list-style: disc; margin-left: 20px;">
+              <li><strong>Requirement Analysis:</strong> Understand your business, target audience, and goals.</li>
+              <li><strong>Design & Wireframes:</strong> Create visually appealing and intuitive designs.</li>
+              <li><strong>Development:</strong> Build a responsive, fast, and secure website.</li>
+              <li><strong>Testing & Launch:</strong> Ensure the website works perfectly across devices.</li>
+              <li><strong>Post-Launch Support:</strong> Provide ongoing maintenance and updates.</li>
+            </ul>
 
-  <!-- Footer -->
+            <h3 class="h3 section-title">Timeline</h3>
+            <p class="text">
+              Typically, a business website project takes <strong>3–5 weeks</strong> depending on the complexity and features required.
+            </p>
+
+            <h3 class="h3 section-title">Requirements</h3>
+            <ul class="text" style="list-style: disc; margin-left: 20px;">
+              <li>Business details and goals</li>
+              <li>Branding assets (logo, colors, fonts)</li>
+              <li>Content and images for the website</li>
+              <li>Domain & hosting access (if available)</li>
+            </ul>
+
+            <div style="margin-top: 40px; text-align: center;">
+              <a href="index.html#contact" class="btn" style="display: inline-flex; align-items: center; gap: 8px;">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <span>Book This Service</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
 
     <div class="footer-top section">
       <div class="container">
 
         <div class="footer-brand">
-
           <a href="#" class="logo">SmartSite Labs</a>
-
           <p class="text">
-            At SmartSite Labs, we build custom websites & AI-powered experiences that don't cut corners - For brands that want more than just a web presence.
+            At SmartSite Labs, we build custom websites & AI-powered experiences that don't cut corners — for brands that want more than just a web presence.
           </p>
 
           <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-whatsapp"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="mail"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
+            <li><a href="#" class="social-link"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="mail"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
           </ul>
-
         </div>
 
         <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Our links</p>
-          </li>
-
-          <li>
-            <a href="#home" class="footer-link">Home</a>
-          </li>
-
-          <li>
-            <a href="#about" class="footer-link">About Us</a>
-          </li>
-
-          <li>
-            <a href="#services" class="footer-link">Services</a>
-          </li>
-          
+          <li><p class="footer-list-title">Our links</p></li>
+          <li><a href="#home" class="footer-link">Home</a></li>
+          <li><a href="#about" class="footer-link">About Us</a></li>
+          <li><a href="#services" class="footer-link">Services</a></li>
         </ul>
 
         <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Our Services</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Business Websites</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Portfolio Websites</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">E-commerce Stores</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">AI & SmartWeb Solutions</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Custom Projects</a>
-          </li>
-
+          <li><p class="footer-list-title">Our Services</p></li>
+          <li><a href="#" class="footer-link">Business Websites</a></li>
+          <li><a href="#" class="footer-link">Portfolio Websites</a></li>
+          <li><a href="#" class="footer-link">E-commerce Stores</a></li>
+          <li><a href="#" class="footer-link">AI & SmartWeb Solutions</a></li>
+          <li><a href="#" class="footer-link">Custom Projects</a></li>
         </ul>
 
         <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Other links</p>
-          </li>
-
-          <li>
-            <a href="FAQ.html" class="footer-link">FAQ</a>
-          </li>
-
-          <li>
-            <a href="Portfolio.html" class="footer-link">Portfolio</a>
-          </li>
-
-          <li>
-            <a href="Privacy.html" class="footer-link">Privacy Policy</a>
-          </li>
-
-          <li>
-            <a href="TnC.html" class="footer-link">Terms & Conditions</a>
-          </li>
-
-          <li>
-            <a href="Support.html" class="footer-link">Support</a>
-          </li>
-
+          <li><p class="footer-list-title">Other links</p></li>
+          <li><a href="FAQ.html" class="footer-link">FAQ</a></li>
+          <li><a href="Portfolio.html" class="footer-link">Portfolio</a></li>
+          <li><a href="Privacy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="TnC.html" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="Support.html" class="footer-link">Support</a></li>
         </ul>
 
         <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Contact Us</p>
-          </li>
+          <li><p class="footer-list-title">Contact Us</p></li>
 
           <li class="footer-item">
-
-            <div class="footer-item-icon">
-              <ion-icon name="call"></ion-icon>
-            </div>
-
+            <div class="footer-item-icon"><ion-icon name="call"></ion-icon></div>
             <div>
               <a href="tel:+918740088558" class="footer-item-link">+91-8740088558</a>
-              <a href="tel: +918600752436" class="footer-item-link">+91-8600752436</a>
+              <a href="tel:+918600752436" class="footer-item-link">+91-8600752436</a>
             </div>
-
           </li>
 
           <li class="footer-item">
-
-            <div class="footer-item-icon">
-              <ion-icon name="mail"></ion-icon>
-            </div>
-
-            <div>
-              <a href="mailto:smartsitelabs@gmail.com" class="footer-item-link">smartsitelabs@gmail.com</a>
-              <!-- <a href="mailto:help@desinic.com" class="footer-item-link">help@desinic.com</a> -->
-            </div>
-
+            <div class="footer-item-icon"><ion-icon name="mail"></ion-icon></div>
+            <div><a href="mailto:smartsitelabs@gmail.com" class="footer-item-link">smartsitelabs@gmail.com</a></div>
           </li>
 
           <li class="footer-item">
-
-            <div class="footer-item-icon">
-              <ion-icon name="location"></ion-icon>
-            </div>
-
-            <address class="footer-item-link">
-              Mumbai, Maharashtra , India
-            </address>
-
+            <div class="footer-item-icon"><ion-icon name="location"></ion-icon></div>
+            <address class="footer-item-link">Mumbai, Maharashtra, India</address>
           </li>
 
         </ul>
-
       </div>
     </div>
 
     <div class="footer-bottom">
       <p class="copyright">
-        &copy; 2025 <a href="#" class="copyright-link">SmartSite Labs</a>. All Right Reserved
+        &copy; 2025 <a href="#" class="copyright-link">SmartSite Labs</a>. All Rights Reserved.
       </p>
     </div>
-
   </footer>
+
+  <a href="#top" class="go-top active" aria-label="Go To Top" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>
