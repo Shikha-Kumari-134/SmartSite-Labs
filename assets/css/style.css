@@ -311,14 +311,14 @@ main article .section {
 
 /* Logo image styling */
 .logo-img {
-  width: 50px;   /* increase/decrease as needed */
+  width: 40px;   /* increase/decrease as needed */
   height: auto;
 }
 
 /* Logo text styling */
 .logo-text {
   color: #2b2929;          /* white text */
-  font-size: 4rem;    /* increase this for larger text */
+  font-size: 2.5rem;    /* increase this for larger text */
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
 }
@@ -333,7 +333,7 @@ main article .section {
   top: 0;
   left: 0;
   width: 100%;
-  padding-block: 6px;
+  padding-block: 10px;
   z-index: 4;
   transition: var(--transition-1);
 }
@@ -1163,4 +1163,8 @@ main article .section {
 
   .footer-brand { grid-column: auto; }
 
+}
+
+section {
+  scroll-margin-top: 60px; /* matches header height */
 }
